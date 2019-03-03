@@ -2,28 +2,42 @@
 <html>
 <head>
 	<title> To-Do List app</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
 		h3{
 			font-weight: bold;
 			font-size: 40px;
+			margin-top: 90px;
 		}
-	</style>
+		body{
+			background-color:  #85c1e9;
+		}
+		input[type=text]{
+			width: 400px;
+		}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</style>
 </head>
 <body>
+	<center>
+		<div>
+			<h3>My Todo list </h3>
 	<input type="text" name="todo" id="todo" placeholder="add your tasks here">
-	<button id="submit">add task</button>
-	<h3>Your To_Do list for today</h3>
+	<button class="btn btn-primary" id="submit">add task</button>
+	
 	<div id="lists">
 		
 	</div>
+
+</div>
+</center>
 	<script type="text/javascript">
 		$("#submit").click(function () {
 			// body...
 			let to_do = $("#todo").val()
-			alert(to_do)
 		    $("#lists").append("<li>" + to_do + "</li>")
+		    $("#todo").val(" ")
 		});
 	</script>
 
